@@ -7,7 +7,6 @@ import singleton.DriverSingleton;
 
 public class Test_Question4 {
     public static WebDriver driver;
-    int number = 13;
 
     @BeforeClass
     public void beforeClass(){
@@ -30,6 +29,7 @@ public class Test_Question4 {
 
     @Test
     public void test02(){
+        int number = 13;
         Buttons printnumber = new Buttons(driver);
         int actual = printnumber.textSeven() + printnumber.textSix();
         Assert.assertEquals(actual, number);
